@@ -15,9 +15,9 @@ void setup() {
 
 void loop() {
   // Read the inputs
-  int x = digitalRead(xPin);
-  int y = digitalRead(yPin);
-  int w = digitalRead(wPin);
+  int x = digitalRead(xPin);// change input 1, 0 as pre your expression
+  int y = digitalRead(yPin);// change input 1, 0 as pre your expression
+  int w = digitalRead(wPin);// change input 1, 0 as pre your expression
 
   // Calculate the equation: a = xy' + wy
   int a = x && (!y) || (w && y);
