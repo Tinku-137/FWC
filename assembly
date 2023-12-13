@@ -1,0 +1,32 @@
+void setup() {
+  // Set pins 2-5 (port D) as output for LEDs
+  DDRD |= B111100; // Set pins 2-5 as output
+}
+
+void loop() {
+  // Blink LEDs based on the AND gate outputs
+
+  // Output of AND gate 1 (connected to pin 2)
+  PORTD &= ~(1 << 2); // Set pin 2 low
+  delay(500); // Wait for 500 milliseconds
+  PORTD |= (1 << 2); // Set pin 2 high
+  delay(500); // Wait for 500 milliseconds
+
+  // Output of AND gate 2 (connected to pin 3)
+  PORTD &= ~(1 << 3); // Set pin 3 low
+  delay(500); // Wait for 500 milliseconds
+  PORTD |= (1 << 3); // Set pin 3 high
+  delay(500); // Wait for 500 milliseconds
+
+  // Output of AND gate 3 (connected to pin 4)
+  PORTD &= ~(1 << 4); // Set pin 4 low
+  delay(500); // Wait for 500 milliseconds
+  PORTD |= (1 << 4); // Set pin 4 high
+  delay(500); // Wait for 500 milliseconds
+
+  // Output of AND gate 4 (connected to pin 5)
+  PORTD &= ~(1 << 5); // Set pin 5 low
+  delay(500); // Wait for 500 milliseconds
+  PORTD |= (1 << 5); // Set pin 5 high
+  delay(500); // Wait for 500 milliseconds
+}
